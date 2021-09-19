@@ -1,2 +1,2 @@
 # anaragomez.github.io
-This repository tell about my skills
+This repository tells about my skills
