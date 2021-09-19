@@ -1,0 +1,12 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #7B1FA2;
+}
+.menu{
+    list-style: none;
+    padding: 0;
+    background: #212121;
+    width: 90%;
+    max-height: 1000px;
+    margin-right: 0;
+}
