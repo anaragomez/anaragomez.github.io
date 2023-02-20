@@ -3,12 +3,16 @@ body {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f8f8f8;
 }
 
 header {
   background-color: #24292e;
   color: white;
   padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav ul {
@@ -28,26 +32,44 @@ nav a:hover {
   background-color: #0366d6;
 }
 
+h1 {
+  margin: 0;
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
+
 main {
   margin: 1em;
 }
 
-article {
+section {
   margin-bottom: 2em;
 }
 
 h2 {
   margin-bottom: 0.5em;
+  color: #24292e;
 }
 
-.post-info {
-  font-size: 0.8em;
-  color: #6a737d;
+ul {
+  list-style: disc;
+  margin-left: 1em;
 }
 
-footer {
-  background-color: #f6f8fa;
-  border-top: 1px solid #e1e4e8;
-  padding: 1em;
-  text-align: center;
+a {
+  color: #0366d6;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.5em;
+  color: #24292e;
+}
+
+input, textarea {
+  margin-bottom: 1em;
+  padding: 0
