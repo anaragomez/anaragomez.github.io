@@ -1,64 +1,38 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Ana Maria Ramirez Gomez</title>
-    <style>
-      /* Add some basic styles to make the page look nicer */
-      body {
-        font-family: sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-      header {
-        background-color: #24292e;
-        color: white;
-        padding: 1em;
-      }
-      nav {
-        background-color: #f6f8fa;
-        border-bottom: 1px solid #e1e4e8;
-        display: flex;
-      }
-      nav a {
-        color: #24292e;
-        display: block;
-        padding: 0.5em 1em;
-        text-decoration: none;
-      }
-      nav a:hover {
-        background-color: #0366d6;
-        color: white;
-      }
-      section {
-        margin: 1em;
-      }
-    </style>
+    <title>Your Blog Title</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <header>
-      <h1>Ana Maria Ramirez Gomez</h1>
+      <h1>Your Blog Title</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
     </header>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#scholarships">Scholarships</a>
-      <a href="#articles">Articles</a>
-      <a href="#books">Books</a>
-    </nav>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Add some information about yourself here.</p>
-    </section>
-    <section id="scholarships">
-      <h2>Scholarships</h2>
-      <p>List any scholarships you have received here.</p>
-    </section>
-    <section id="articles">
-      <h2>Articles</h2>
-      <p>List any articles you have written here.</p>
-    </section>
-    <section id="books">
-      <h2>Books</h2>
-      <p>List any books you have written here.</p>
-    </section>
+    <main>
+      <article>
+        <header>
+          <h2>Blog Post Title</h2>
+          <p class="post-info">Posted on March 1, 2023 by Your Name</p>
+        </header>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius felis a elit faucibus, non lobortis dui volutpat. Duis mattis enim quis urna ultrices mollis.</p>
+      </article>
+      <article>
+        <header>
+          <h2>Another Blog Post Title</h2>
+          <p class="post-info">Posted on March 2, 2023 by Your Name</p>
+        </header>
+        <p>Suspendisse potenti. Sed malesuada sapien vitae posuere laoreet. In hac habitasse platea dictumst.</p>
+      </article>
+    </main>
+    <footer>
+      <p>&copy; 2023 Your Name</p>
+    </footer>
   </body>
 </html>
