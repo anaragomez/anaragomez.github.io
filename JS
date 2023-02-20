@@ -1,15 +1,44 @@
-document.getElementById("icon_menu").addEventListener("click", mostrar_menu);
+// Select the navigation links and the sections
+const navLinks = document.querySelectorAll('nav ul li a');
+const sections = document.querySelectorAll('main section');
 
-function mostrar_menu(){
+// Add a click event listener to each navigation link
+navLinks.forEach(link => {
+  link.addEventListener('click', e => {
+    // Prevent the default behavior of the link
+    e.preventDefault();
 
-    document.querySelector(".menu").classList.toggle("mostrar_menu");
-    
-}
+    // Get the section ID from the href attribute
+    const sectionID = link.getAttribute('href');
 
-window.onscroll = function () {
-    var posicion = window.pageYOffset || document.documentElement.scrollTop;
-    var elemento1 = document.getElementById("icon_heart");
-    var elemento2 = document.getElementById("icon_fire");
-    elemento1.style.bottom = posicion * 0.1 + "px";
-    elemento2.style.top = posicion * 0.1 + "px";
-}
+    // Scroll to the section with the matching ID
+    document.querySelector(sectionID).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+
+// Add a scroll event listener to the window
+window.addEventListener('scroll', () => {
+  // Get the current scroll position
+  const scrollPosition = window.scrollY;
+
+  // Check if each section is in the viewport
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+
+    if (scrollPosition >= sectionTop - 50 && scrollPosition < sectionTop + sectionHeight - 50) {
+      // Add the "active" class to the corresponding navigation link
+      const sectionID = section.getAttribute('id');
+      const correspondingNavLink = document.querySelector(`nav ul li a[href="#${sectionID}"]`);
+      correspondingNavLink.classList.add('active');
+    } else {
+      // Remove the "active" class from the corresponding navigation link
+      const sectionID = section.getAttribute('id');
+      const correspondingNavLink = document.querySelector(`nav ul li a[href="#${sectionID}"]`);
+      correspondingNavLink.classList.remove('active');
+    }
+  });
+});
+
